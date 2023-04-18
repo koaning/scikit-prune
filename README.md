@@ -27,7 +27,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-pipe = make_pipeline(TfidfVectorizer(), TruncatedSVD(100))
+pipe = make_pipeline(TfidfVectorizer(), TruncatedSVD(300))
 pipe.fit(text)
 ```
 
@@ -59,6 +59,11 @@ as a ZIP file which moves it closer to 41Mb.
 ## Caveats 
 
 This technique can save a bunch of disk space for sure, but at least theoretically,
-it can lead to some numerical mishaps when you try to apply the pruned pipeline. 
+it can _also_ lead to some numerical mishaps when you try to apply the pruned pipeline. 
 Always make sure that you check and evaluate the pruned pipeline before doing anything
 in production with it! 
+
+It's also good to remember that your results may certainly vary. In our example
+the `TruncatedSVD` component was the culprit because it was dealing with a _very_ large internal
+matrix. If your pipeline doesn't have very large matrices, you probably won't get
+big savings in disk space.

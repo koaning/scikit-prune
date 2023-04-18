@@ -4,6 +4,14 @@
 
 > Prune your sklearn models.
 
+## Installation 
+
+```
+python -m pip install scikit-prune
+```
+
+## Quickstart
+
 Deep learning libraries offer pruning techniques to ensure that the
 models are lightweight when they are stored on disk. It's a technique
 that makes a lot of sense; you often don't need float64 numbers to

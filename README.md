@@ -1,4 +1,4 @@
- <img src="https://raw.githubusercontent.com/koaning/scikit-prune/main/docs/images/logo.png" width="125" height="125" align="right" />
+ <img src="logo.png" width="125" height="125" align="right" />
 
 # scikit-prune
 

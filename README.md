@@ -62,7 +62,8 @@ from skprune import prune
 dump(prune(pipe), "piper-lite.skops")
 ```
 
-Now, the file is fair bit lighter, only 126Mb on disk. Which is a step
+The `prune` function takes all the `float64` arrays in the pipeline and casts
+them to become `float16` arrays instead. And as a result the file is fair bit lighter: only 126Mb on disk. Which is a step
 in the right direction. You can get it down even further by saving it 
 as a ZIP file which moves it closer to 41Mb. 
 

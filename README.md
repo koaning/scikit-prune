@@ -1,6 +1,6 @@
  <img src="logo.png" width="125" height="125" align="right" />
 
-# scikit-prune
+### scikit-prune
 
 > Prune your sklearn models.
 
